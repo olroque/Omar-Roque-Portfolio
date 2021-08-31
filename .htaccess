@@ -4,11 +4,3 @@ RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}#top -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
-
-
-RewriteEngine on
-RewriteCond %{THE_REQUEST} /([^.]+)\#top [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
